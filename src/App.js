@@ -28,7 +28,6 @@ class App extends Component {
          <PortfolioComponent/>
           <SlackComponent />
           <SeleniumComponent />
-          <PortfolioComponent />
         </div>
       </div>
     );
