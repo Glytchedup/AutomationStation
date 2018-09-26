@@ -3,7 +3,7 @@ import './Portfolio.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NoMatch from "./pages/NoMatch";
 import Detail from "./pages/Detail";
-import Books from "./pages/Books";
+import Hotels from "./pages/Hotels";
 
 
 
@@ -14,9 +14,9 @@ class PortfolioComponent extends Component {
       <Router>
       <div>
         <Switch>
-          <Route exact path="/" component={Books} />
-          <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
+          <Route exact path="/" component={Hotels} />
+          <Route exact path="/hotels" component={Hotels} />
+          <Route exact path="/hotels/:id" component={Detail} />
           <Route component={NoMatch} />
         </Switch>
       </div>

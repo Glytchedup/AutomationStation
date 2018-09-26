@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../../Grid";
 import Jumbotron from "../../../Jumbotron";
 import API from "../../utils/API";
