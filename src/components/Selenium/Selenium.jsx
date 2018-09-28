@@ -1,37 +1,17 @@
 import React, {Component} from 'react';
 import './Selenium.css';
+// selenium = require 'selenium-webdriver'
+// driver = new selenium.Builder()
+//   .withCapabilities(selenium.Capabilities.chrome())
+//   .build()
 
 
 class SeleniumComponent extends Component {
-
+  
   render() {
     return (
-      <div className="links">
-        <div className="link-list">
-          <a target="_blank" href="https://github.com/glytchedup">
-        <button type="button" className="btn btn-primary">OYV2 EXTRACT</button>
-          </a>
-           {/* <break></break> */}
-          <a target="_blank" href="https://twitter.com/davekubo">
-        <button type="button" className="btn btn-info">SEG10</button>
-          </a>
-          {/* <break></break> */}
-          <a target="_blank" href="https://www.linkedin.com/in/david-kuboshige-29786a76">
-        <button type="button" className="btn btn-success">Briefcase Reports</button>
-          </a>
-          {/* <break></break> */}
-          <a target="_blank" href="https://www.linkedin.com/in/david-kuboshige-29786a76">
-        <button type="button" className="btn btn-warning">GPO Clicker</button>
-          </a>
-          {/* <break></break> */}
-          <a target="_blank" href="https://www.linkedin.com/in/david-kuboshige-29786a76">
-        <button type="button" className="btn btn-danger">IO Clickers</button>
-          </a>
-          {/* <break></break> */}
-          <a target="_blank" href="https://www.linkedin.com/in/david-kuboshige-29786a76">
-        <button type="button" className="btn btn-secondary">Shop Marriott.com</button>
-          </a>
-        </div>
+      <div>
+    Placeholder
       </div>
     );
   }

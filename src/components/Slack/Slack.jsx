@@ -6,8 +6,8 @@ class SlackComponent extends Component {
     return (
         
       <div>
-      <img src="https://a.slack-edge.com/3aabd6/marketing/img/pricing/enterprise_grid_logo.png" size={50}/>
-      <p>Placeholder for Slack Integration</p>
+      <img src="https://a.slack-edge.com/3aabd6/marketing/img/pricing/enterprise_grid_logo.png" size={50} alt="placeholder"/>
+      <p>Slack Integration</p>
       </div>
 
         

@@ -1,3 +1,3 @@
 module.exports = {
-  Book: require("./hotel")
+  Hotel: require("./hotel")
 };

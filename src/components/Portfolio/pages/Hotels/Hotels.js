@@ -1,16 +1,18 @@
 import React, { Component } from "react";
-import DeleteBtn from "../../../DeleteBtn";
-import Jumbotron from "../../../Jumbotron";
+import DeleteBtn from "../../components/DeleteBtn";
+import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../../Grid";
-import { List, ListItem } from "../../../List";
-import { Input, FormBtn } from "../../../Form";
+import { Col, Row, Container } from "../../components/Grid";
+import { List, ListItem } from "../../components/List";
+import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class hotels extends Component {
+class Hotels extends Component {
   state = {
     hotels: [],
     marsha: "",
+    IO: "",
+    synopsis: ""
   };
 
   componentDidMount() {
@@ -20,13 +22,13 @@ class hotels extends Component {
   loadHotels = () => {
     API.getHotels()
       .then(res =>
-        this.setState({ hotels: res.data, marsha: ""})
+        this.setState({ hotels: res.data, marsha: "", IO: "", synopsis: "" })
       )
       .catch(err => console.log(err));
   };
 
   deleteHotel = id => {
-    API.deleteHotels(id)
+    API.deleteHotel(id)
       .then(res => this.loadHotels())
       .catch(err => console.log(err));
   };
@@ -40,9 +42,11 @@ class hotels extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.marsha) {
+    if (this.state.marsha && this.state.IO) {
       API.saveHotel({
         marsha: this.state.marsha,
+        IO: this.state.IO,
+        synopsis: this.state.synopsis
       })
         .then(res => this.loadHotels())
         .catch(err => console.log(err));
@@ -55,38 +59,38 @@ class hotels extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Hotels am I using today?</h1>
+              <h1>What Hotels Should I Use?</h1>
             </Jumbotron>
             <form>
               <Input
                 value={this.state.marsha}
                 onChange={this.handleInputChange}
                 name="marsha"
-                placeholder="marsha (required)"
+                placeholder="Marsha (required)"
               />
-              {/* <Input
-                value={this.state.author}
+              <Input
+                value={this.state.IO}
                 onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="IO"
+                placeholder="IO (required)"
               />
               <TextArea
                 value={this.state.synopsis}
                 onChange={this.handleInputChange}
                 name="synopsis"
                 placeholder="Synopsis (Optional)"
-              /> */}
+              />
               <FormBtn
-                disabled={!(this.state.marsha)}
+                disabled={!(this.state.IO && this.state.marsha)}
                 onClick={this.handleFormSubmit}
               >
-                Add Hotel
+                Submit Hotel
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Hotels on my List</h1>
+              <h1>Hotels On My List</h1>
             </Jumbotron>
             {this.state.hotels.length ? (
               <List>
@@ -94,10 +98,10 @@ class hotels extends Component {
                   <ListItem key={hotel._id}>
                     <Link to={"/hotels/" + hotel._id}>
                       <strong>
-                        {hotel.marsha}
+                        {hotel.marsha} IO:{hotel.IO}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deletehotel(hotel._id)} />
+                    <DeleteBtn onClick={() => this.deleteHotel(hotel._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -111,4 +115,4 @@ class hotels extends Component {
   }
 }
 
-export default hotels;
+export default Hotels;

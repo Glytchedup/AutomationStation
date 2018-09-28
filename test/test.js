@@ -4,6 +4,9 @@
 var assert = require("assert").strict;
 var webdriver = require("selenium-webdriver");
 require("geckodriver");
+// Application Server
+const serverUri = "http://localhost:3000/#";
+const appTitle = "React Selenium App";
 
 // Application Server
 const serverUri = "http://localhost:3000/#";

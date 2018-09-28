@@ -10,6 +10,7 @@ import "./App.css";
 import SlackComponent from "./components/Slack/Slack";
 import SeleniumComponent from "./components/Selenium/Selenium";
 import PortfolioComponent from "./components/Portfolio/Portfolio";
+// import Nav from "./components/Nav/Nav";
 // import SpreadSheetContainer from "./components/Excel/excel"
 
 // import "@babel/polyfill";
@@ -20,16 +21,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Automation Station</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p className="App-intro" />
         <div className="App">
-         <PortfolioComponent/>
+          <PortfolioComponent />
           <SlackComponent />
           <SeleniumComponent />
-          
         </div>
       </div>
     );
