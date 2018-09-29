@@ -1,14 +1,12 @@
 const request = require("request-promise");
 const cheerio = require("cheerio");
 
-const url = "https://marriott.com/SBSFI";
-
-const scrapeResults = [];
+//fix this to run when you add to hotel list -- and add info to db.
+// export default function webScrape() {
 
 const scrapeSample = {
   title: "Courtyard Fresno",
-  photo:
-    "https://cache.marriott.com/marriottassets/marriott/FATCH/fatch-exterior-0014-hor-feat.jpg?interpolation=progressive-bilinear&downsize=1180px:*",
+  photo: "https://cache.marriott.com/marriottassets/marriott/FATCH/fatch-exterior-0014-hor-feat.jpg?interpolation=progressive-bilinear&downsize=1180px:*",
   address: "140 East Shaw Avenue",
   city: "Fresno",
   state: "California",
@@ -16,13 +14,16 @@ const scrapeSample = {
   phone: "1 559-221-6000"
 };
 
-async function scrapeHotel() {
+export default async function scrapeHotel(urlm) {
+  const scrapeResults = [];
+
+  var url = `https://marriott.com/${urlm}`;
   try {
     const htmlResult = await request.get(url);
     const $ = await cheerio.load(htmlResult);
 
     $(".page-container").each(() => {
-     
+
       // Edit Text Somehow....
       const title = $("span[itemprop = 'name']").text();
 
@@ -32,7 +33,15 @@ async function scrapeHotel() {
       const state = $("span[itemprop = 'addressRegion']").text();
       const zip = $("span[itemprop = 'postalCode']").text();
       const phone = $("span[itemprop = 'telephone']").text();
-      const scrapeResult = { title, photo, address, city, state, zip, phone };
+      const scrapeResult = {
+        title,
+        photo,
+        address,
+        city,
+        state,
+        zip,
+        phone
+      };
       scrapeResults.push(scrapeResult);
     });
 
@@ -41,5 +50,3 @@ async function scrapeHotel() {
     console.log(err);
   }
 }
-
-scrapeHotel();
