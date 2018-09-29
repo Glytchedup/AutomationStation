@@ -41,6 +41,7 @@ class Hotels extends Component {
     });
   };
 
+  //Need to add webscrape info here so that it all saves to the database.
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.marsha && this.state.IO) {
@@ -69,6 +70,7 @@ class Hotels extends Component {
                 name="marsha"
                 placeholder="Marsha (required)"
               />
+              {/* change this to a yes or no box. */}
               <Input
                 value={this.state.IO}
                 onChange={this.handleInputChange}
@@ -99,7 +101,7 @@ class Hotels extends Component {
                   <ListItem key={hotel._id}>
                     <Link to={"/hotels/" + hotel._id}>
                       <strong>
-                        {hotel.marsha} IO:{hotel.IO}
+                        {hotel.marsha}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteHotel(hotel._id)} />

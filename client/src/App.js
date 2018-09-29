@@ -14,8 +14,8 @@ const App = () => (
         <p className="App-intro" />
         <div className="App">
           <PortfolioComponent />
-          <SlackComponent />
-          <SeleniumComponent />
+          {/* <SlackComponent /> */}
+          {/* <SeleniumComponent /> */}
         </div>
       </div>
 );

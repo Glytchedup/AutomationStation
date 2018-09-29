@@ -17,7 +17,8 @@ class PortfolioComponent extends Component {
           <Switch>
             <Route exact path="/" component={Hotels} />
             <Route exact path="/hotels" component={Hotels} />
-            <Route exact path="/hotels/:id" component={Detail} />
+            {/* <Route exact path="/hotels/:id" component={Detail} /> */}
+            <Route exact path="/hotels/:marsha" component={Detail} />
             <Route component={NoMatch} />
           </Switch>
           </Router> 
