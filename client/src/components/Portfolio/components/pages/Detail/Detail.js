@@ -11,12 +11,13 @@ class Detail extends Component {
   // When this component mounts, grab the hotel with the _id of this.props.match.params.id
   // e.g. localhost:3000/hotels/599dcb67f0f16317844583fc
   componentDidMount() {
-    API.getHotel(this.props.match.params.id)
-      .then(res => this.setState({ hotel: res.data }))
+    API.getHotel(this.props.match.params.marsha)
+      .then(res => this.setState({ hotel: res.data}))
       .catch(err => console.log(err));
   }
 
   render() {
+    const keys = ["synopsis","IO","title","address","city","state","zip","phone","date"];
     return (
       <Container fluid>
         <Row>
@@ -27,11 +28,18 @@ class Detail extends Component {
           </Col>
         </Row>
         <Row>
+            {keys.map(key => (
+                <Col size="md-5 md-offset-1" key = {key}>
+                <article>
+                  <h1>{key}</h1>
+                  <p>{this.state.hotel[key]}</p>
+                </article>
+              </Col>
+            ))}
+        </Row>
+        <Row>
           <Col size="md-5 md-offset-1">
-            <article>
-              <h1>Synopsis</h1>
-              <p>{this.state.hotel.synopsis}</p>
-            </article>
+          <img src = {this.state.hotel.photo}/>
           </Col>
         </Row>
         <Row>

@@ -15,6 +15,7 @@ export default {
   },
   // Saves a hotel to the database
   saveHotel: function(hotelData) {
+    console.log("1")
     return axios.post("/api/hotels", hotelData);
   }
 };

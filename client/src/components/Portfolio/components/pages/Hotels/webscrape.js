@@ -15,9 +15,11 @@ const scrapeSample = {
 };
 
 export default async function scrapeHotel(urlm) {
+
   const scrapeResults = [];
 
-  var url = `https://marriott.com/${urlm}`;
+   var url = `https://marriott.com/${urlm}`;
+ // var url = `https://marriott.com/rwlfi`;
   try {
     const htmlResult = await request.get(url);
     const $ = await cheerio.load(htmlResult);
@@ -49,4 +51,5 @@ export default async function scrapeHotel(urlm) {
   } catch (err) {
     console.log(err);
   }
+  return ;
 }
