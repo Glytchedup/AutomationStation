@@ -54,46 +54,60 @@ class Hotels extends Component {
         .catch(err => console.log(err));
     }
   };
+  
+  handleGoSubmit = function (e) {
+      if (e.preventDefault) {
+          e.preventDefault();
+      }
+      if (document.getElementById('automation1').checked) {
+        window.open('http://www.google.com');
+      } else if (document.getElementById('automation2').checked) {
+        window.open('http://www.bing.com');
+      } else if (document.getElementById('automation3').checked) {
+        window.open('http://www.yahoo.com');
+      }
+        return false;
+  };
 
   render() {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-4">
             <Jumbotron>
               <h1>Add a Hotel</h1>
             </Jumbotron>
             <form>
+            <div class="form-group">
               <Input
                 value={this.state.marsha}
                 onChange={this.handleInputChange}
                 name="marsha"
                 placeholder="Marsha (required)"
-              />
+                />
               {/* change this to a yes or no box. */}
-              <Input
-                value={this.state.IO}
-                onChange={this.handleInputChange}
-                name="IO"
-                placeholder="IO (required)"
-              />
+            <select>
+              <option selected value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
               <TextArea
                 value={this.state.synopsis}
                 onChange={this.handleInputChange}
                 name="synopsis"
                 placeholder="Synopsis (Optional)"
-              />
+                />
               <FormBtn
                 disabled={!(this.state.IO && this.state.marsha)}
                 onClick={this.handleFormSubmit}
-              >
+                >
                 Submit Hotel
               </FormBtn>
+                </div>  
             </form>
           </Col>
-          <Col size="md-6 sm-12">
+          <Col size="md-4">
             <Jumbotron>
-              <h1>Hotels On My List</h1>
+              <h1>My List</h1>
             </Jumbotron>
             {this.state.hotels.length ? (
               <List>
@@ -110,10 +124,35 @@ class Hotels extends Component {
               </List>
             ) : (
               <h3>No Results to Display</h3>
-            )}
+              )}
           </Col>
-        </Row>
-      </Container>
+          <Col size="md-4">
+            <Jumbotron>
+              <h1>Run Me</h1>
+            </Jumbotron>
+            <form action="">
+<input type="radio" id="automation1" 
+name="script" value="www.google.com" notchecked />
+<label for="IOClicker">IO Clicker</label>
+<br></br>
+<input type="radio" id="automation2" 
+name="script" value="www.bing.com" notchecked />
+<label for="GPOClicker">GPO Clicker</label>
+<br></br>
+<input type="radio" id="automation3" 
+name="script" value="www.yahoo.com" notchecked />
+<label for="invCheck">INV Check</label>
+<div class="form-group">
+
+<FormBtn
+onClick={this.handleGoSubmit}
+> Go
+</FormBtn>
+</div>  
+</form>
+</Col>
+</Row>
+</Container>
     );
   }
 }
