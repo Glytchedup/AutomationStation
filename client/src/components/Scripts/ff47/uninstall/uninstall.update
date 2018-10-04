@@ -1,0 +1,15 @@
+Performing a replace request
+PATCH DIRECTORY C:\Users\davek\AppData\Local\Mozilla\Firefox\firefox\updates\0
+INSTALLATION DIRECTORY C:\Users\davek\Scripts\ff47
+WORKING DIRECTORY C:\Users\davek\Scripts\ff47\updated
+Begin moving destDir (C:\Users\davek\Scripts\ff47) to tmpDir (C:\Users\davek\Scripts\ff47.bak)
+rename_file: proceeding to rename the directory
+Begin moving newDir (C:\Users\davek\Scripts\ff47.bak/updated) to destDir (C:\Users\davek\Scripts\ff47)
+rename_file: proceeding to rename the directory
+Now, remove the tmpDir
+ensure_remove: failed to remove file: C:\Users\davek\Scripts\ff47.bak/updater.exe, rv: -1, err: 13
+ensure_remove_recursive: unable to remove directory: C:\Users\davek\Scripts\ff47.bak, rv: -1, err: 41
+Removing tmpDir failed, err: -1
+remove_recursive_on_reboot: failed to schedule OS reboot removal of file: C:\Users\davek\Scripts\ff47\tobedeleted\repB91C.tmp
+succeeded
+calling QuitProgressUI

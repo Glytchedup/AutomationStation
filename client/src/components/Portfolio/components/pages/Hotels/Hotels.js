@@ -81,22 +81,25 @@ class Hotels extends Component {
             </Jumbotron>
             <form>
             <div class="form-group">
-              <Input
+              <Input 
+                type="text"
                 value={this.state.marsha}
                 onChange={this.handleInputChange}
                 name="marsha"
                 placeholder="Marsha (required)"
                 />
-              {/* change this to a yes or no box. */}
-            <select>
-              <option selected value="Yes">Yes</option>
-              <option value="No">No</option>
+            <select value={this.state.IO} onChange={this.handleInputChange} name="IO" type="switch">
+            <option value=""></option>
+            <option selected value="Yes">Yes</option>
+            <option value="No">No</option>
             </select>
+            <br></br>
               <TextArea
+              type="text"
                 value={this.state.synopsis}
                 onChange={this.handleInputChange}
                 name="synopsis"
-                placeholder="Synopsis (Optional)"
+                placeholder="Description (Optional)"
                 />
               <FormBtn
                 disabled={!(this.state.IO && this.state.marsha)}
@@ -146,6 +149,7 @@ name="script" value="www.yahoo.com" notchecked />
 <label for="invCheck">INV Check</label>
 <div class="form-group">
 
+
 <FormBtn
 onClick={this.handleGoSubmit}
 > Go
@@ -157,6 +161,7 @@ onClick={this.handleGoSubmit}
 </Container>
     );
   }
+
 }
 
 export default Hotels;

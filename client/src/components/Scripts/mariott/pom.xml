@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ru.apmt.autotests</groupId>
+    <artifactId>mariott.script</artifactId>
+    <version>0.10</version>
+    <packaging>jar</packaging>
+
+    <name>mariott.script</name>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+        <compiler.version>1.8</compiler.version>    
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>sonatype-ossrh</id>            
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url> 
+        </repository>
+    </repositories>          
+   
+    <dependencies>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>            
+            <version>3.11</version>
+        </dependency>     
+
+        <dependency>
+            <groupId>com.sikulix</groupId>
+            <artifactId>sikulixapi</artifactId>
+            <version>1.1.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.13.1</version>
+        </dependency>    
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${compiler.version}</source>
+                    <target>${compiler.version}</target>
+                    <debug>false</debug>
+                    <compilerArgs>
+                        <arg>-Xlint:deprecation</arg>
+                    </compilerArgs>                
+                </configuration>
+            </plugin>  
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        
+                        <configuration>
+                            <transformers>
+                                <transformer
+                                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>MariottScripts</mainClass>
+                                </transformer>
+                            </transformers>
+                            
+                            <minimizeJar>false</minimizeJar>
+                            
+                            <artifactSet>
+                                <excludes>
+                                    <exclude>org.seleniumhq.selenium:selenium-edge-driver:jar:</exclude>
+                                    <exclude>org.seleniumhq.selenium:selenium-chrome-driver:jar</exclude>
+                                    <exclude>org.seleniumhq.selenium:selenium-ie-driver:jar:</exclude>
+                                    <exclude>org.seleniumhq.selenium:selenium-opera-driver:jar:</exclude>
+                                    <exclude>org.seleniumhq.selenium:htmlunit-driver:jar:</exclude>
+                                    <exclude>junit:junit:jar:</exclude>
+                                    <exclude>net.sourceforge.htmlunit:htmlunit:jar:</exclude>
+                                    <exclude>net.sourceforge.htmlunit:htmlunit-core-js:jar:</exclude>
+                                    <exclude>net.sourceforge.htmlunit:neko-htmlunit:jar:</exclude>
+                                    <exclude>org.eclipse.jetty:jetty-util:jar:</exclude>
+                                    <exclude>org.eclipse.jetty:jetty-io:jar:</exclude>
+                                    <exclude>net.lightbody.bmp:browsermob-core:jar:</exclude>
+                                    <exclude>net.lightbody.bmp:littleproxy:jar:</exclude>
+                                    <exclude>net.lightbody.bmp:mitm:jar:</exclude>
+                                    <exclude>org.bouncycastle:bcprov-jdk15on:jar:</exclude>
+                                    <exclude>org.bouncycastle:bcpkix-jdk15on:jar:</exclude>
+                                    <exclude>com.codeborne:phantomjsdriver:jar:</exclude>
+                                </excludes>
+                            </artifactSet>   
+                                                     
+                        </configuration>  
+                    </execution>
+                </executions>
+            </plugin>    
+                                                                                                                   
+        </plugins>
+    </build>   
+   
+</project>
