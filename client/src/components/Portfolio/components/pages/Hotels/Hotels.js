@@ -41,7 +41,6 @@ class Hotels extends Component {
     });
   };
 
-  //Need to add webscrape info here so that it all saves to the database.
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.marsha && this.state.IO) {
@@ -55,6 +54,9 @@ class Hotels extends Component {
     }
   };
   
+  // automation 1 needs to be changed to open ../../../Scripts/app/OYV2 IO Clicker.cmd
+  // automation 2 needs to be changed to open ../../../Scripts/app/OYV2 GPO Clicker.cmd
+  // automation 3 needs to be changed to open ../../../Scripts/app/config.txt
   handleGoSubmit = function (e) {
       if (e.preventDefault) {
           e.preventDefault();

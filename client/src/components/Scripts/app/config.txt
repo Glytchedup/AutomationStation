@@ -1,0 +1,16 @@
+
+url = https://salesnet.marriott.com
+
+# OYV2 Marsha codes
+calendar2_level = BVUFI,GEGFI,FAISH
+# Update to your EID and password
+login= EID
+pass= PASSWORD
+
+# Update to your EID
+ff_bin = C:\\Users\EID\\Scripts\\ff47\\firefox.exe
+
+# for GPO Clicker 
+letter_codes = BVUFI,GEGFI,FAISH
+path_to_save_test_price = C:\Users\EID\Desktop
+
