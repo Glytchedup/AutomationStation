@@ -60,7 +60,10 @@ class Hotels extends Component {
     }
     if (document.getElementById("automation1").checked) {
       // window.open("http://www.google.com");
-      window.open("file:///C:/Users/davek/Desktop/Automation_Station_Files/AutomationStation/client/src/components/Scripts/app/Temp.txt");
+      //Desktoplink
+      // window.open("file:///C:/Users/davek/Desktop/Automation_Station_Files/AutomationStation/client/src/components/Scripts/app/Temp.txt");
+      //Laptoplink
+      window.open("file:///C:/Users/davek/Documents/AutomationStation/client/src/components/Scripts/app/IOC.cmd");
     } else if (document.getElementById("automation2").checked) {
       window.open("http://www.bing.com");
     } else if (document.getElementById("automation3").checked) {
@@ -74,6 +77,7 @@ class Hotels extends Component {
       <Container fluid>
         <Row>
           <Col size="md-4">
+            <div className="form-group"> </div>
             <Jumbotron>
               <h1>Add a Hotel</h1>
             </Jumbotron>
@@ -117,6 +121,7 @@ class Hotels extends Component {
             </form>
           </Col>
           <Col size="md-4">
+            <div className="form-group"> </div>
             <Jumbotron>
               <h1>My List</h1>
             </Jumbotron>
@@ -136,6 +141,7 @@ class Hotels extends Component {
             )}
           </Col>
           <Col size="md-4">
+            <div className="form-group"> </div>
             <Jumbotron>
               <h1>Run Me</h1>
             </Jumbotron>

@@ -8,8 +8,6 @@ class Detail extends Component {
   state = {
     hotel: {}
   };
-  // When this component mounts, grab the hotel with the _id of this.props.match.params.id
-  // e.g. localhost:3000/hotels/599dcb67f0f16317844583fc
   componentDidMount() {
     API.getHotel(this.props.match.params.marsha)
       .then(res => this.setState({ hotel: res.data}))

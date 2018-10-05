@@ -21,7 +21,14 @@ class PortfolioComponent extends Component {
             <Route component={NoMatch} />
           </Switch>
           </Router> 
-          <a href="file:///C:/Users/davek/Desktop/Automation_Station_Files/AutomationStation/client/src/components/Scripts/app/Temp.txt">Test Link</a>
+          <a href="file:///C:/Users/davek/Desktop/Automation_Station_Files/AutomationStation/client/src/components/Scripts/app/Temp.txt">Desktop txt</a>
+          <br></br>
+          <a href="file:///C:/Users/davek/Desktop/Automation_Station_Files/AutomationStation/client/src/components/Scripts/app/IOC.cmd">Desktop IO</a>
+          <br></br>
+          <a href="file:///C:/Users/davek/Documents/AutomationStation/client/src/components/Scripts/app/Temp.txt">Laptop txt Link</a>
+          <br></br>
+          <a href="file:///C:/Users/davek/Documents/AutomationStation/client/src/components/Scripts/app/IOC.cmd">Laptop IO Link</a>
+          <br></br>
         </div>
     );
   }

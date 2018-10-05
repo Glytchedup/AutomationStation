@@ -1,9 +1,6 @@
 const request = require("request-promise");
 const cheerio = require("cheerio");
 
-//fix this to run when you add to hotel list -- and add info to db.
-// export default function webScrape() {
-
 const scrapeSample = {
   title: "Courtyard Fresno",
   photo: "https://cache.marriott.com/marriottassets/marriott/FATCH/fatch-exterior-0014-hor-feat.jpg?interpolation=progressive-bilinear&downsize=1180px:*",
@@ -18,14 +15,14 @@ export default async function scrapeHotel(urlm) {
 
   const scrapeResults = [];
 
-   var url = `https://marriott.com/${urlm}`;
+  var url = `https://marriott.com/${urlm}`;
   try {
     const htmlResult = await request.get(url);
     const $ = await cheerio.load(htmlResult);
 
     $(".page-container").each(() => {
 
-      // Edit Text Somehow....
+      //Need to edit the Marriott Part off the end
       const title = $("span[itemprop = 'name']").text();
 
       const photo = $(".l-align-center").attr("src");
@@ -50,5 +47,5 @@ export default async function scrapeHotel(urlm) {
   } catch (err) {
     console.log(err);
   }
-  return ;
+  return;
 }
