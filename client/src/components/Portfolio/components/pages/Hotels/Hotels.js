@@ -20,7 +20,7 @@ class Hotels extends Component {
   }
 
   loadHotels = () => {
-    console.log(API)
+    console.log(API);
     API.getHotels()
       .then(res =>
         this.setState({ hotels: res.data, marsha: "", IO: "", synopsis: "" })
@@ -53,22 +53,20 @@ class Hotels extends Component {
         .catch(err => console.log(err));
     }
   };
-  
-  // automation 1 needs to be changed to open ../../../Scripts/app/OYV2 IO Clicker.cmd
-  // automation 2 needs to be changed to open ../../../Scripts/app/OYV2 GPO Clicker.cmd
-  // automation 3 needs to be changed to open ../../../Scripts/app/config.txt
-  handleGoSubmit = function (e) {
-      if (e.preventDefault) {
-          e.preventDefault();
-      }
-      if (document.getElementById('automation1').checked) {
-        window.open('http://www.google.com');
-      } else if (document.getElementById('automation2').checked) {
-        window.open('http://www.bing.com');
-      } else if (document.getElementById('automation3').checked) {
-        window.open('http://www.yahoo.com');
-      }
-        return false;
+
+  handleGoSubmit = function(e) {
+    if (e.preventDefault) {
+      e.preventDefault();
+    }
+    if (document.getElementById("automation1").checked) {
+      // window.open("http://www.google.com");
+      window.open("file:///C:/Users/davek/Desktop/Automation_Station_Files/AutomationStation/client/src/components/Scripts/app/Temp.txt");
+    } else if (document.getElementById("automation2").checked) {
+      window.open("http://www.bing.com");
+    } else if (document.getElementById("automation3").checked) {
+      window.open("http://www.yahoo.com");
+    }
+    return false;
   };
 
   render() {
@@ -80,34 +78,42 @@ class Hotels extends Component {
               <h1>Add a Hotel</h1>
             </Jumbotron>
             <form>
-            <div class="form-group">
-              <Input 
-                type="text"
-                value={this.state.marsha}
-                onChange={this.handleInputChange}
-                name="marsha"
-                placeholder="Marsha (required)"
+              <div className="form-group">
+                <Input
+                  type="text"
+                  value={this.state.marsha}
+                  onChange={this.handleInputChange}
+                  name="marsha"
+                  placeholder="Marsha (required)"
                 />
-            <select value={this.state.IO} onChange={this.handleInputChange} name="IO" type="switch">
-            <option value=""></option>
-            <option selected value="Yes">Yes</option>
-            <option value="No">No</option>
-            </select>
-            <br></br>
-              <TextArea
-              type="text"
-                value={this.state.synopsis}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Description (Optional)"
-                />
-              <FormBtn
-                disabled={!(this.state.IO && this.state.marsha)}
-                onClick={this.handleFormSubmit}
+                <div className="form-group"> 
+                <p>IO (Yes or No) </p>   
+                  <select
+                    value={this.state.IO}
+                    onChange={this.handleInputChange}
+                    name="IO"
+                    type="switch"
+                  >
+                    <option defaultValue=" "> </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                  <div className="form-group"> </div>
+                  <TextArea
+                    type="text"
+                    value={this.state.synopsis}
+                    onChange={this.handleInputChange}
+                    name="synopsis"
+                    placeholder="Description (Optional)"
+                  />
+                </div>
+                <FormBtn
+                  disabled={!(this.state.IO && this.state.marsha)}
+                  onClick={this.handleFormSubmit}
                 >
-                Submit Hotel
-              </FormBtn>
-                </div>  
+                  Submit Hotel
+                </FormBtn>
+              </div>
             </form>
           </Col>
           <Col size="md-4">
@@ -119,9 +125,7 @@ class Hotels extends Component {
                 {this.state.hotels.map(hotel => (
                   <ListItem key={hotel._id}>
                     <Link to={"/hotels/" + hotel._id}>
-                      <strong>
-                        {hotel.marsha}
-                      </strong>
+                      <strong>{hotel.marsha}</strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteHotel(hotel._id)} />
                   </ListItem>
@@ -129,39 +133,48 @@ class Hotels extends Component {
               </List>
             ) : (
               <h3>No Results to Display</h3>
-              )}
+            )}
           </Col>
           <Col size="md-4">
             <Jumbotron>
               <h1>Run Me</h1>
             </Jumbotron>
             <form action="">
-<input type="radio" id="automation1" 
-name="script" value="www.google.com" notchecked />
-<label for="IOClicker">IO Clicker</label>
-<br></br>
-<input type="radio" id="automation2" 
-name="script" value="www.bing.com" notchecked />
-<label for="GPOClicker">GPO Clicker</label>
-<br></br>
-<input type="radio" id="automation3" 
-name="script" value="www.yahoo.com" notchecked />
-<label for="invCheck">INV Check</label>
-<div class="form-group">
-
-
-<FormBtn
-onClick={this.handleGoSubmit}
-> Go
-</FormBtn>
-</div>  
-</form>
-</Col>
-</Row>
-</Container>
+              <input
+                type="radio"
+                id="automation1"
+                name="script"
+                value="www.google.com"
+                notchecked = "true"
+              />
+              <label htmlFor="IOClicker">IO Clicker</label>
+              <br />
+              <input
+                type="radio"
+                id="automation2"
+                name="script"
+                value="www.bing.com"
+                notchecked = "true"
+              />
+              <label htmlFor="GPOClicker">GPO Clicker</label>
+              <br />
+              <input
+                type="radio"
+                id="automation3"
+                name="script"
+                value="www.yahoo.com"
+                notchecked = "true"
+              />
+              <label htmlFor="invCheck">INV Check</label>
+              <div className="form-group">
+                <FormBtn onClick={this.handleGoSubmit}> Go</FormBtn>
+              </div>
+            </form>
+          </Col>
+        </Row>
+      </Container>
     );
   }
-
 }
 
 export default Hotels;

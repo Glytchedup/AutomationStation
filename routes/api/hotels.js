@@ -12,5 +12,5 @@ router
   .get(hotelsController.findById)
   .put(hotelsController.update)
   .delete(hotelsController.remove);
-
+  
 module.exports = router;
