@@ -6,6 +6,12 @@ import API from "../../../../../utils/API";
 import { Col, Row, Container } from "../../Grid";
 import { List, ListItem } from "../../List";
 import { Input, TextArea, FormBtn } from "../../Form";
+// import cmdrun from "../../../../../foo";
+//import foo from "../../../../Scripts/app/foo";
+
+{/* <script type="text/javascript" src="../../../Scripts/app/foo.js"></script> */}
+
+
 
 class Hotels extends Component {
   state = {
@@ -63,7 +69,9 @@ class Hotels extends Component {
       //Desktoplink
       // window.open("file:///C:/Users/davek/Desktop/Automation_Station_Files/AutomationStation/client/src/components/Scripts/app/Temp.txt");
       //Laptoplink
-      window.open("file:///C:/Users/davek/Documents/AutomationStation/client/src/components/Scripts/app/IOC.cmd");
+      // window.open("file:///C:/Users/davek/Documents/AutomationStation/client/src/components/Scripts/app/IOC.cmd");
+    //foo();
+    // cmdrun();
     } else if (document.getElementById("automation2").checked) {
       window.open("http://www.bing.com");
     } else if (document.getElementById("automation3").checked) {
@@ -178,6 +186,23 @@ class Hotels extends Component {
             </form>
           </Col>
         </Row>
+        <form size = "md-3">
+        <input
+                  type="text"
+                  value={this.state.username}
+                  name="eid"
+                  placeholder="EID"
+                />
+                   <div className="form-group"></div>
+          <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          // class="form-control"
+          data-toggle="password"
+          value={this.state.password}
+          />
+          </form>  
       </Container>
     );
   }

@@ -18,6 +18,15 @@ app.use(routes);
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reacthotellist");
 
+
+// var cmd = require('node-cmd');
+// cmd.run(
+//   ' cd "./client/src/components/Scripts/app/" && java -jar mariott.script-0.10.jar calendar2',
+//   function(err, data, stderr){
+//       console.log('the current working dir is : ',data)
+//   }
+// );
+
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
