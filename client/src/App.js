@@ -1,5 +1,5 @@
 import React from "react";
-
+import SlackComponent from "./components/Slack";
 import PortfolioComponent from "./components/Portfolio/Portfolio";
 
 
