@@ -12,6 +12,7 @@ const App = () => (
         <div className="App">
           <PortfolioComponent />
         </div>
+          <SlackComponent />
       </div>
 );
 

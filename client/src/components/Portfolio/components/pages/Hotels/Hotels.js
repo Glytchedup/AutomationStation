@@ -47,6 +47,13 @@ class Hotels extends Component {
     });
   };
 
+  handlelogininput = event => {
+    const { eid, password } = event.target;
+    this.setState({
+      [eid]: password
+    });
+  }
+
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.marsha && this.state.IO) {
@@ -84,7 +91,7 @@ class Hotels extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-4">
+          <Col size="md-3">
             <div className="form-group"> </div>
             <Jumbotron>
               <h1>Add a Hotel</h1>
@@ -130,15 +137,16 @@ class Hotels extends Component {
           </Col>
           <Col size="md-4">
             <div className="form-group"> </div>
+            <Col size = "md-6">
             <Jumbotron>
               <h1>My List</h1>
             </Jumbotron>
             {this.state.hotels.length ? (
-              <List>
+              <List class="list-group-item list-group-item-dark">
                 {this.state.hotels.map(hotel => (
                   <ListItem key={hotel._id}>
                     <Link to={"/hotels/" + hotel._id}>
-                      <strong>{hotel.marsha}</strong>
+                      <strong >{hotel.marsha}</strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteHotel(hotel._id)} />
                   </ListItem>
@@ -147,13 +155,14 @@ class Hotels extends Component {
             ) : (
               <h3>No Results to Display</h3>
             )}
+                </Col>
           </Col>
-          <Col size="md-4">
+          <Col size="md-3">
             <div className="form-group"> </div>
             <Jumbotron>
               <h1>Run Me</h1>
             </Jumbotron>
-            <form action="">
+            <form action="" size = "col-3">
               <input
                 type="radio"
                 id="automation1"
@@ -184,6 +193,7 @@ class Hotels extends Component {
                 <FormBtn onClick={this.handleGoSubmit}> Go</FormBtn>
               </div>
             </form>
+          
           </Col>
         </Row>
         <form size = "md-3">
