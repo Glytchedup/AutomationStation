@@ -17,5 +17,9 @@ export default {
   saveHotel: function(hotelData) {
     console.log("1")
     return axios.post("/api/hotels", hotelData);
+  },
+
+  runHotelIO: function() {
+    return axios.get("/api/trivago");
   }
 };

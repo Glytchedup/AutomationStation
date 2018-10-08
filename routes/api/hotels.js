@@ -5,12 +5,16 @@ const hotelsController = require("../../controllers/hotelsController");
 router.route("/")
   .get(hotelsController.findAll)
   .post(hotelsController.create);
-
-// Matches with "/api/hotels/:id"
-router
+  
+  // Matches with "/api/hotels/:id"
+  router
   .route("/:id")
   .get(hotelsController.findById)
   .put(hotelsController.update)
   .delete(hotelsController.remove);
   
-module.exports = router;
+  router
+  .route("/trivago")
+  .get(hotelsController.findAll);
+
+    module.exports = router;

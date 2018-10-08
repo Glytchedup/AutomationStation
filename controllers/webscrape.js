@@ -34,7 +34,7 @@ const cheerio = require("cheerio");
           // Edit Text Somehow....
           const title = $("span[itemprop = 'name']").text();
           const photo = $(".l-align-center").attr("src");
-           const address = $("span[itemprop = 'streetAddress']").text();
+          const address = $("span[itemprop = 'streetAddress']").text();
           const city = $("span[itemprop = 'addressLocality']").text();
           const state = $("span[itemprop = 'addressRegion']").text();
           const zip = $("span[itemprop = 'postalCode']").text();

@@ -15,6 +15,7 @@ let config = 'url = https://salesnet.marriott.com\r\n\r\n' +
              '# for GPO Clicker\r\n' +
              'letter_codes = BVUFI,GEGFI,FAISH\r\n' +
              'path_to_save_test_price = C:\Users\EID\Desktop';
+             'path_to_save_test_price2 = C:\Users\EID\Desktop';
                          
              // write to a new file named 2pac.txt
              fs.writeFile('app/test.txt', config, (err) => {  

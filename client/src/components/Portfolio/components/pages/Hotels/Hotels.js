@@ -9,10 +9,6 @@ import { Input, TextArea, FormBtn } from "../../Form";
 // import cmdrun from "../../../../../foo";
 //import foo from "../../../../Scripts/app/foo";
 
-{/* <script type="text/javascript" src="../../../Scripts/app/foo.js"></script> */}
-
-
-
 class Hotels extends Component {
   state = {
     hotels: [],
@@ -38,6 +34,11 @@ class Hotels extends Component {
     API.deleteHotel(id)
       .then(res => this.loadHotels())
       .catch(err => console.log(err));
+  };
+
+  runHotelIO = id => {
+    API.runHotelIO()
+    .catch(err => console.log(err));
   };
 
   handleInputChange = event => {
@@ -139,7 +140,7 @@ class Hotels extends Component {
             <div className="form-group"> </div>
             <Col size = "md-6">
             <Jumbotron>
-              <h1>My List</h1>
+              <h1>Hotels</h1>
             </Jumbotron>
             {this.state.hotels.length ? (
               <List class="list-group-item list-group-item-dark">
@@ -162,14 +163,17 @@ class Hotels extends Component {
             <Jumbotron>
               <h1>Run Me</h1>
             </Jumbotron>
+            
+            <div class="well">
+
             <form action="" size = "col-3">
               <input
                 type="radio"
                 id="automation1"
                 name="script"
                 value="www.google.com"
-                notchecked = "true"
-              />
+                // notchecked = "true"
+                />
               <label htmlFor="IOClicker">IO Clicker</label>
               <br />
               <input
@@ -177,8 +181,9 @@ class Hotels extends Component {
                 id="automation2"
                 name="script"
                 value="www.bing.com"
-                notchecked = "true"
-              />
+
+                // notchecked = "true"
+                />
               <label htmlFor="GPOClicker">GPO Clicker</label>
               <br />
               <input
@@ -186,33 +191,33 @@ class Hotels extends Component {
                 id="automation3"
                 name="script"
                 value="www.yahoo.com"
-                notchecked = "true"
-              />
+                />
               <label htmlFor="invCheck">INV Check</label>
               <div className="form-group">
                 <FormBtn onClick={this.handleGoSubmit}> Go</FormBtn>
               </div>
             </form>
+                </div>
           
           </Col>
         </Row>
         <form size = "md-3">
-        <input
-                  type="text"
-                  value={this.state.username}
-                  name="eid"
-                  placeholder="EID"
-                />
-                   <div className="form-group"></div>
-          <input 
-          type="password" 
-          id="password" 
-          name="password" 
-          // class="form-control"
-          data-toggle="password"
-          value={this.state.password}
-          />
-          </form>  
+<input
+type="text"
+value={this.state.username}
+name="eid"
+placeholder="EID"
+/>
+<div className="form-group"></div>
+  <input 
+  type="password" 
+  id="password" 
+  name="password" 
+  // class="form-control"
+  data-toggle="password"
+  value={this.state.password}
+  />
+  </form>     
       </Container>
     );
   }

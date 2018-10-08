@@ -37,7 +37,7 @@ class Detail extends Component {
         </Row>
         <Row>
           <Col size="md-5 md-offset-1">
-          <img src = {this.state.hotel.photo}/>
+          <img src = {this.state.hotel.photo} alt = "hotel"/>
           </Col>
         </Row>
         <Row>
