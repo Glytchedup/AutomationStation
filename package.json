@@ -29,6 +29,7 @@
     "express": "^4.15.4",
     "if-env": "^1.0.4",
     "mdbootstrap": "^4.5.12",
+    "mdbreact": "^4.8.1",
     "mongoose": "^5.0.17",
     "node-cmd": "^3.0.0",
     "react-slack-chat": "^1.10.2",
