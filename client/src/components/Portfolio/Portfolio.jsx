@@ -6,6 +6,7 @@ import Detail from "./components/pages/Detail";
 import Hotels from "./components/pages/Hotels";
 import Nav from "./components/Nav/Nav";
 
+
 class PortfolioComponent extends Component {
 
   render() {

@@ -14,7 +14,7 @@ class Hotels extends Component {
     hotels: [],
     marsha: "",
     IO: "",
-    synopsis: ""
+    description: ""
   };
 
   componentDidMount() {
@@ -25,7 +25,7 @@ class Hotels extends Component {
     console.log(API);
     API.getHotels()
       .then(res =>
-        this.setState({ hotels: res.data, marsha: "", IO: "", synopsis: "" })
+        this.setState({ hotels: res.data, marsha: "", IO: "", description: "" })
       )
       .catch(err => console.log(err));
   };
@@ -61,7 +61,7 @@ class Hotels extends Component {
       API.saveHotel({
         marsha: this.state.marsha,
         IO: this.state.IO,
-        synopsis: this.state.synopsis
+        description: this.state.description
       })
         .then(res => this.loadHotels())
         .catch(err => console.log(err));
@@ -95,7 +95,7 @@ class Hotels extends Component {
           <Col size="md-3">
             <div className="form-group"> </div>
             <Jumbotron>
-              <h1>Add a Hotel</h1>
+              <h1>Add Hotel</h1>
             </Jumbotron>
             <form>
               <div className="form-group">
@@ -121,15 +121,16 @@ class Hotels extends Component {
                   <div className="form-group"> </div>
                   <TextArea
                     type="text"
-                    value={this.state.synopsis}
+                    value={this.state.description}
                     onChange={this.handleInputChange}
-                    name="synopsis"
+                    name="description"
                     placeholder="Description (Optional)"
                   />
                 </div>
                 <FormBtn
                   disabled={!(this.state.IO && this.state.marsha)}
                   onClick={this.handleFormSubmit}
+                  type="button" 
                 >
                   Submit Hotel
                 </FormBtn>
@@ -182,6 +183,7 @@ class Hotels extends Component {
                 name="script"
                 value="www.bing.com"
 
+
                 // notchecked = "true"
                 />
               <label htmlFor="GPOClicker">GPO Clicker</label>
@@ -194,13 +196,16 @@ class Hotels extends Component {
                 />
               <label htmlFor="invCheck">INV Check</label>
               <div className="form-group">
-                <FormBtn onClick={this.handleGoSubmit}> Go</FormBtn>
+                <FormBtn 
+                className="btn btn-success"
+                onClick={this.handleGoSubmit}> Go
+                
+                </FormBtn>
               </div>
             </form>
-                </div>
-          
-          </Col>
-        </Row>
+            <row>
+            <div className="form-group">
+              
         <form size = "md-3">
 <input
 type="text"
@@ -218,6 +223,12 @@ placeholder="EID"
   value={this.state.password}
   />
   </form>     
+  </div>
+  </row>
+                </div>
+          
+          </Col>
+        </Row>
       </Container>
     );
   }

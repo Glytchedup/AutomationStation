@@ -6,7 +6,7 @@ calendar2_level = BVUFI,GEGFI,FAISH
 
 # EID and password
 login= EID
-pass= PASSWORD
+pass= password
 
 # Update to your EID
 ff_bin = ..\\ff47\\firefox.exe 

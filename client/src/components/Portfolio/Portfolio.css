@@ -31,3 +31,17 @@ body {
   background-color: #4C4C4C;
 }
 
+p {
+  color:white
+}
+
+label {
+  color:white
+
+}
+
+/* .jumbotron {
+  border-style: solid;
+  border: 1px;
+  border-color: #fff; 
+} */
