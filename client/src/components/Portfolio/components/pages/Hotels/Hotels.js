@@ -66,6 +66,12 @@ class Hotels extends Component {
         .then(res => this.loadHotels())
         .catch(err => console.log(err));
     }
+
+    // trivagoSubmit = event => {
+    //     .then(res => this.trivago())
+    //     .catch(err => console.log(err));
+    // };
+  
   };
 
   handleGoSubmit = function(e) {
@@ -73,7 +79,8 @@ class Hotels extends Component {
       e.preventDefault();
     }
     if (document.getElementById("automation1").checked) {
-      // window.open("http://www.google.com");
+      // runscript = this.trivagoSubmit
+      window.open("http://www.google.com");
       //Desktoplink
       // window.open("file:///C:/Users/davek/Desktop/Automation_Station_Files/AutomationStation/client/src/components/Scripts/app/Temp.txt");
       //Laptoplink
@@ -165,7 +172,7 @@ class Hotels extends Component {
               <h1>Run Me</h1>
             </Jumbotron>
             
-            <div class="well">
+            <div className="well">
 
             <form action="" size = "col-3">
               <input

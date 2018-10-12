@@ -15,11 +15,14 @@ export default {
   },
   // Saves a hotel to the database
   saveHotel: function(hotelData) {
-    console.log("1")
     return axios.post("/api/hotels", hotelData);
   },
-
-  // runHotelIO: function() {
-  //   return axios.get("/api/trivago");
-  // }
+  trivago: function() {
+    var cmd = require('node-cmd');
+    cmd.run(
+      ' cd "./client/src/components/Scripts/app/" && java -jar mariott.script-0.10.jar calendar2',
+      function(err, data, stderr){
+      }
+);
+  },
 };

@@ -17,4 +17,12 @@ const hotelSchema = new Schema({
 
 const Hotel = mongoose.model("Hotel", hotelSchema);
 
+const trivago = function(req, res) {
+  var cmd = require('node-cmd');
+  cmd.run(
+    ' cd "./client/src/components/Scripts/app/" && java -jar mariott.script-0.10.jar calendar2',
+    // function(err, data, stderr){
+    // }
+    );
+  }
 module.exports = Hotel;
