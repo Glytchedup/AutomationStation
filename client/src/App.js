@@ -1,7 +1,7 @@
 import React from "react";
 import SlackComponent from "./components/Slack/Slack";
 import PortfolioComponent from "./components/Portfolio/Portfolio";
-import FormsPage from "./components/signin/FormsPage"
+// import FormsPage from "./components/signin/FormsPage"
 
 
 const App = () => (
@@ -14,7 +14,7 @@ const App = () => (
           <PortfolioComponent />
         </div>
           <SlackComponent />
-          <FormsPage />
+          {/* <FormsPage /> */}
       </div>
 );
 

@@ -19,7 +19,7 @@ export default {
     return axios.post("/api/hotels", hotelData);
   },
 
-  runHotelIO: function() {
-    return axios.get("/api/trivago");
-  }
+  // runHotelIO: function() {
+  //   return axios.get("/api/trivago");
+  // }
 };

@@ -25,8 +25,8 @@ class SlackComponent extends Component {
             // name: 'bayteamvmo'
             // name: 'test-temp'
         ]}
-        helpText='Slack 🌎'
-        themeColor='#007bff'
+        helpText='Slack 💬'
+        themeColor='#000000'
         userImage={botImage}
       />
     )
