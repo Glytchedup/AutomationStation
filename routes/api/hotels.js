@@ -16,9 +16,8 @@ router.route("/")
   // console.log('routes/hotels.js/"/id update"')
   .delete(hotelsController.remove);
   
-  router
-  .route("/trivago")
-  .get(hotelsController.read);
+  // router.route("/trivago")
+  // .get(hotelsController.trivago);
 
 
 

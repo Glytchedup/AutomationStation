@@ -36,10 +36,10 @@ class Hotels extends Component {
       .catch(err => console.log(err));
   };
 
-  runHotelIO = id => {
-    API.runHotelIO()
-    .catch(err => console.log(err));
-  };
+  // runHotelIO = event => {
+  //   API.runIO()
+  //   .catch(err => console.log(err));
+  // };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -73,24 +73,29 @@ class Hotels extends Component {
     // };
   
   };
+  runIO = event => {
+      event.preventDefault();
+    API.trivago()
+      .then(res =>
+        console.log('success')
+      )
+      .catch(err => console.log(err));
+  };
 
   handleGoSubmit = function(e) {
     if (e.preventDefault) {
       e.preventDefault();
     }
     if (document.getElementById("automation1").checked) {
-      // runscript = this.trivagoSubmit
-      window.open("http://www.google.com");
-      //Desktoplink
-      // window.open("file:///C:/Users/davek/Desktop/Automation_Station_Files/AutomationStation/client/src/components/Scripts/app/Temp.txt");
-      //Laptoplink
-      // window.open("file:///C:/Users/davek/Documents/AutomationStation/client/src/components/Scripts/app/IOC.cmd");
-    //foo();
-    // cmdrun();
+        API.trivago()
+      // window.open("http://www.google.com");
+    
     } else if (document.getElementById("automation2").checked) {
       window.open("http://www.bing.com");
+    
     } else if (document.getElementById("automation3").checked) {
       window.open("http://www.yahoo.com");
+    
     }
     return false;
   };
