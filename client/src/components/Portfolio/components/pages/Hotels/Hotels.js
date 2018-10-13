@@ -182,7 +182,7 @@ class Hotels extends Component {
           <Col size="md-3">
             <div className="form-group"> </div>
             <Jumbotron>
-              <h1>Run Me</h1>
+              <h1>Run Tests</h1>
             </Jumbotron>
             
             <div className="well">
@@ -242,7 +242,10 @@ placeholder="EID"
   data-toggle="password"
   value={this.state.password}
   />
-  </form>     
+  </form> 
+  <FormBtn className="btn-success">
+  Update config Test
+  </FormBtn>
   </div>
   </row>
                 </div>
