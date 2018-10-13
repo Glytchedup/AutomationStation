@@ -5,11 +5,18 @@ const apiRoutes = require("./api");
 // API Routes
 router.use("/api", apiRoutes);
 router.get("/api/trivago", function (req, res) {
-var cmd = require('node-cmd');
-cmd.run(
-  ' cd "./client/src/components/Scripts/app/" && java -jar mariott.script-0.10.jar calendar2',
-)
-  })
+    var cmd = require('node-cmd');
+    cmd.run(
+        ' cd "./client/src/components/Scripts/app/" && java -jar mariott.script-0.10.jar calendar2',
+    )
+})
+
+router.get("/api/gpo", function (req, res) {
+    var cmd = require('node-cmd');
+    cmd.run(
+        ' cd "./client/src/components/Scripts/app/" && java -jar mariott.script-0.10.jar testprice',
+    )
+})
 
 
 // // If no API routes are hit, send the React app

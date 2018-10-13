@@ -23,6 +23,10 @@ export default {
   trivago:  () => {
     console.log('test trivago');
      return axios.get("api/trivago")
+  },
+  gpo:  () => {
+    console.log('test gpo');
+     return axios.get("api/gpo")
   }
 
 }

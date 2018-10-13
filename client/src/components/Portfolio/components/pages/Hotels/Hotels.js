@@ -81,6 +81,14 @@ class Hotels extends Component {
       )
       .catch(err => console.log(err));
   };
+  runGPO = event => {
+      event.preventDefault();
+    API.gpo()
+      .then(res =>
+        console.log('success')
+      )
+      .catch(err => console.log(err));
+  };
 
   handleGoSubmit = function(e) {
     if (e.preventDefault) {
@@ -91,7 +99,7 @@ class Hotels extends Component {
       // window.open("http://www.google.com");
     
     } else if (document.getElementById("automation2").checked) {
-      window.open("http://www.bing.com");
+    API.gpo()
     
     } else if (document.getElementById("automation3").checked) {
       window.open("http://www.yahoo.com");

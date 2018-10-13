@@ -52,5 +52,13 @@ module.exports = {
         function(err, data, stderr){
         }
         );
-      }
-};
+      },
+  runGPO: function(req, res) {
+        var cmd = require('node-cmd');
+          cmd.run(
+            ' cd "./client/src/components/Scripts/app/" && java -jar mariott.script-0.10.jar testprice',
+            function(err, data, stderr){
+            }
+            );
+          }
+    };

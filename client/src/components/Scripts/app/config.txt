@@ -5,14 +5,14 @@ url = https://salesnet.marriott.com
 calendar2_level = BVUFI,GEGFI,FAISH
 
 # EID and password
-login= EID
-pass= password
+login= drkub294
+pass= toad7897897897
 
 # Update to your EID
 ff_bin = ..\\ff47\\firefox.exe 
 #C:\\Users\\EID\\Scripts\\ff47\\firefox.exe
 
 # for GPO Clicker 
-letter_codes = BVUFI,GEGFI,FAISH
+letter_codes = BVUFI,GEGFI
 path_to_save_test_price = C:\Users\EID\Desktop
 
