@@ -114,9 +114,10 @@ class Hotels extends Component {
         <Row>
           <Col size="md-3">
             <div className="form-group"> </div>
-            <Jumbotron>
+            <div className="card text-white bg-info">
+            {/* <Jumbotron> */}
               <h1>Add Hotel</h1>
-            </Jumbotron>
+            {/* </Jumbotron> */}
             <form>
               <div className="form-group">
                 <Input
@@ -125,7 +126,7 @@ class Hotels extends Component {
                   onChange={this.handleInputChange}
                   name="marsha"
                   placeholder="Marsha (required)"
-                />
+                  />
                 <div className="form-group"> 
                 <p>IO (Yes or No) </p>   
                   <select
@@ -133,7 +134,7 @@ class Hotels extends Component {
                     onChange={this.handleInputChange}
                     name="IO"
                     type="switch"
-                  >
+                    >
                     <option defaultValue=" "> </option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
@@ -145,24 +146,27 @@ class Hotels extends Component {
                     onChange={this.handleInputChange}
                     name="description"
                     placeholder="Description (Optional)"
-                  />
+                    />
                 </div>
                 <FormBtn
                   disabled={!(this.state.IO && this.state.marsha)}
                   onClick={this.handleFormSubmit}
-                  type="button" 
-                >
-                  Submit Hotel
+                  type="button"
+                  className="btn-success"
+                  >
+                  Add Hotel
                 </FormBtn>
               </div>
             </form>
+                  </div>
           </Col>
-          <Col size="md-4">
+          <Col size="md-2">
             <div className="form-group"> </div>
-            <Col size = "md-6">
-            <Jumbotron>
+          <div className="card text-white bg-success">
+            <Col size = "md-12">
+            {/* <Jumbotron> */}
               <h1>Hotels</h1>
-            </Jumbotron>
+            {/* </Jumbotron> */}
             {this.state.hotels.length ? (
               <List class="list-group-item list-group-item-dark">
                 {this.state.hotels.map(hotel => (
@@ -178,12 +182,12 @@ class Hotels extends Component {
               <h3>No Results to Display</h3>
             )}
                 </Col>
+            </div>
           </Col>
           <Col size="md-3">
-            <div className="form-group"> </div>
-            <Jumbotron>
+                        <div className="form-group"> </div>
+          <div className="card text-white bg-info">
               <h1>Run Tests</h1>
-            </Jumbotron>
             
             <div className="well">
 
@@ -223,6 +227,7 @@ class Hotels extends Component {
                 </FormBtn>
               </div>
             </form>
+            </div>
             <row>
             <div className="form-group">
               
