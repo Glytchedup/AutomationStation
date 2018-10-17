@@ -120,6 +120,7 @@ class Hotels extends Component {
             {/* </Jumbotron> */}
             <form>
               <div className="form-group">
+              
                 <Input
                   type="text"
                   value={this.state.marsha}
@@ -166,9 +167,14 @@ class Hotels extends Component {
             <Col size = "md-12">
             {/* <Jumbotron> */}
               <h1>Hotels</h1>
+
+ {/* Card Example */}
+
+
+            
             {/* </Jumbotron> */}
             {this.state.hotels.length ? (
-              <List class="list-group-item list-group-item-dark">
+              <List class="list-group-item list-group-item-dark list-group-flush">
                 {this.state.hotels.map(hotel => (
                   <ListItem key={hotel._id}>
                     <Link to={"/hotels/" + hotel._id}>
