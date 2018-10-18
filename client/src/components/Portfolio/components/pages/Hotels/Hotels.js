@@ -114,18 +114,20 @@ class Hotels extends Component {
         <Row>
           <Col size="md-3">
             <div className="form-group"> </div>
-            <Jumbotron>
+            <div className="card text-white bg-dark">
+            {/* <Jumbotron> */}
               <h1>Add Hotel</h1>
-            </Jumbotron>
+            {/* </Jumbotron> */}
             <form>
               <div className="form-group">
+              
                 <Input
                   type="text"
                   value={this.state.marsha}
                   onChange={this.handleInputChange}
                   name="marsha"
                   placeholder="Marsha (required)"
-                />
+                  />
                 <div className="form-group"> 
                 <p>IO (Yes or No) </p>   
                   <select
@@ -133,7 +135,7 @@ class Hotels extends Component {
                     onChange={this.handleInputChange}
                     name="IO"
                     type="switch"
-                  >
+                    >
                     <option defaultValue=" "> </option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
@@ -145,26 +147,34 @@ class Hotels extends Component {
                     onChange={this.handleInputChange}
                     name="description"
                     placeholder="Description (Optional)"
-                  />
+                    />
                 </div>
                 <FormBtn
                   disabled={!(this.state.IO && this.state.marsha)}
                   onClick={this.handleFormSubmit}
-                  type="button" 
-                >
-                  Submit Hotel
+                  type="button"
+                  className="btn-success"
+                  >
+                  Add Hotel
                 </FormBtn>
               </div>
             </form>
+                  </div>
           </Col>
-          <Col size="md-4">
+          <Col size="md-2">
             <div className="form-group"> </div>
-            <Col size = "md-6">
-            <Jumbotron>
+          <div className="card text-white bg-dark">
+            <Col size = "md-12">
+            {/* <Jumbotron> */}
               <h1>Hotels</h1>
-            </Jumbotron>
+
+ {/* Card Example */}
+
+
+            
+            {/* </Jumbotron> */}
             {this.state.hotels.length ? (
-              <List class="list-group-item list-group-item-dark">
+              <List class="list-group-item list-group-item-dark list-group-flush">
                 {this.state.hotels.map(hotel => (
                   <ListItem key={hotel._id}>
                     <Link to={"/hotels/" + hotel._id}>
@@ -178,12 +188,12 @@ class Hotels extends Component {
               <h3>No Results to Display</h3>
             )}
                 </Col>
+            </div>
           </Col>
           <Col size="md-3">
-            <div className="form-group"> </div>
-            <Jumbotron>
+                        <div className="form-group"> </div>
+          <div className="card text-white bg-dark">
               <h1>Run Tests</h1>
-            </Jumbotron>
             
             <div className="well">
 
@@ -223,6 +233,7 @@ class Hotels extends Component {
                 </FormBtn>
               </div>
             </form>
+            </div>
             <row>
             <div className="form-group">
               
