@@ -114,7 +114,7 @@ class Hotels extends Component {
         <Row>
           <Col size="md-3">
             <div className="form-group"> </div>
-            <div className="card text-white bg-info">
+            <div className="card text-white bg-dark">
             {/* <Jumbotron> */}
               <h1>Add Hotel</h1>
             {/* </Jumbotron> */}
@@ -163,7 +163,7 @@ class Hotels extends Component {
           </Col>
           <Col size="md-2">
             <div className="form-group"> </div>
-          <div className="card text-white bg-success">
+          <div className="card text-white bg-dark">
             <Col size = "md-12">
             {/* <Jumbotron> */}
               <h1>Hotels</h1>
@@ -192,7 +192,7 @@ class Hotels extends Component {
           </Col>
           <Col size="md-3">
                         <div className="form-group"> </div>
-          <div className="card text-white bg-info">
+          <div className="card text-white bg-dark">
               <h1>Run Tests</h1>
             
             <div className="well">
