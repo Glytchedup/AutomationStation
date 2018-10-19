@@ -25,6 +25,7 @@ class Detail extends Component {
             </Jumbotron>
           </Col>
         </Row>
+        <div className="card text-gray bg-dark info">
         <Row>
             {keys.map(key => (
                 <Col size="md-5 md-offset-1" key = {key}>
@@ -35,10 +36,13 @@ class Detail extends Component {
               </Col>
             ))}
         </Row>
+        </div>
         <Row>
+        <div className="card text-gray bg-light md-5">
           <Col size="md-5 md-offset-1">
           <img src = {this.state.hotel.photo} alt = "hotel"/>
           </Col>
+        </div>
         </Row>
         <Row>
           <Col size="md-2">
