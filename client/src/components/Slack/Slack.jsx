@@ -20,6 +20,10 @@ class SlackComponent extends Component {
           {name: 'p3_slack'},
           {name: 'p3t2',
           id: 'GD8A395K4',
+        },
+          {name: 'classstream'},
+          {name: 'ClassStream',
+          id: 'CD9EJNJTZ',
         }
             //Work room
             // name: 'bayteamvmo'
