@@ -237,14 +237,14 @@ class Hotels extends Component {
             <row>
             <div className="form-group">
               
-        <form size = "md-3">
+        <form size = "md-3" >
 <input
 type="text"
 value={this.state.username}
 name="eid"
 placeholder="EID"
 />
-<div className="form-group"></div>
+<div className="form-group login"></div>
   <input 
   type="password" 
   id="password" 
@@ -254,7 +254,7 @@ placeholder="EID"
   value={this.state.password}
   />
   </form> 
-  <FormBtn className="btn-success">
+  <FormBtn className="btn btn-success">
   Update config Test
   </FormBtn>
   </div>

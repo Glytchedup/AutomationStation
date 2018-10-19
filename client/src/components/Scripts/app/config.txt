@@ -5,8 +5,8 @@ url = https://salesnet.marriott.com
 calendar2_level = BVUFI,GEGFI
 
 # EID and password
-login= drkub294
-pass= toad7897897897
+login= ****
+pass= ****
 
 # Update to your EID
 ff_bin = ..\\ff47\\firefox.exe 
