@@ -1,68 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 
-.card {
-  padding-left: 5px;
-  padding-right:5px;
-  padding-top:5px;
-  padding-bottom:20px;
-}
-
-.info {
-padding-bottom:10px
-
-}
-
-.btn {
-  margin-top: 20px;
-
-}
-.links {
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.link-list {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.link-list a {
-  color: rgba(22, 21, 28, 0.73);
-  text-decoration: none;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-.link-list a:first-of-type {
-  margin-left: 0;
-}
-
-.form-group {
-  padding-top: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px; 
-}
-
-.login {
-padding-bottom: 10px
-
-}
-body {
-  background-color: #4C4C4C;
-}
-
-p {
-  color:white
-}
-
-label {
-  color:white
-
-}
-
-
 :root {
   --level-one: translateZ(3rem);
   --level-two: translateZ(6rem);
@@ -87,7 +24,7 @@ body {
 }
 
 .card2 {
-  width: 400px;
+  width:600px;
 }
 
 .card__content {
@@ -169,9 +106,3 @@ body {
 }
 
 
-
-/* .jumbotron {
-  border-style: solid;
-  border: 1px;
-  border-color: #fff; 
-} */
