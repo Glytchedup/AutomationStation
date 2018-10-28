@@ -9,24 +9,22 @@ class SlackComponent extends Component {
     return (        
       <ReactSlackChat
       //Test Slack Room
-        // botName="testbot1"
-        // apiToken="eG94Yi0zNDIzMTMyMTE0MDgtNDQ5OTQwMDg2OTk0LWVPcTIxdHNUZEZTZGxiMDlXd0pIUHdlRw=="
-        botName="contactme"
-        apiToken="eG94Yi00NjU4NzMxNTg1NDgtNDY1MzA4MDQxNjAwLVFaUEJBM0R2OXpZVmJydmI0NFZUZk43SQ=="
+        botName="testbot1"
+        apiToken="eG94Yi0zNDIzMTMyMTE0MDgtNDQ5OTQwMDg2OTk0LWVPcTIxdHNUZEZTZGxiMDlXd0pIUHdlRw=="
         
         //Work Slack Room
         // botName="rmasbot"
         // apiToken="eG94Yi0xMDUwOTg4Njk3NzktNDUwOTg2NDE0NTE5LUZPd0ZxdEJzdXZJdFRWZnZybFRUQmZnYg=="
 
         channels={[
-          {name: 'contactme'},
-          {name: 'Contact Me',
-          id: 'CDR2V1W8P',
+          {name: 'p3_slack'},
+          {name: 'p3t2',
+          id: 'GD8A395K4',
         },
-        //   {name: 'classstream'},
-        //   {name: 'ClassStream',
-        //   id: 'CD9EJNJTZ',
-        // }
+          {name: 'classstream'},
+          {name: 'ClassStream',
+          id: 'CD9EJNJTZ',
+        }
             //Work room
             // name: 'bayteamvmo'
             // name: 'test-temp'

@@ -23,14 +23,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-// var cmd = require('node-cmd');
-// cmd.run(
-//   ' cd "./client/src/components/Scripts/app/" && java -jar mariott.script-0.10.jar calendar2',
-//   function(err, data, stderr){
-//       console.log('the current working dir is : ',data)
-//   }
-// );
-
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
