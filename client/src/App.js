@@ -1,7 +1,7 @@
 import React from "react";
-import SlackComponent from "./components/Slack/Slack";
+// import SlackComponent from "./components/Slack/Slack";
 import PortfolioComponent from "./components/Portfolio/Portfolio";
-import FlipcardComponent from "./components/Portfolio/components/FlipCard/flipcard"
+// import FlipcardComponent from "./components/Portfolio/components/FlipCard/flipcard"
 // var auth = require('./routes/auth');
 
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+/* @import url('https://fonts.googleapis.com/css?family=Oswald:400,700'); */
 
 .card {
   padding-left: 5px;
@@ -62,7 +62,7 @@ label {
 
 }
 
-
+/* 
 :root {
   --level-one: translateZ(3rem);
   --level-two: translateZ(6rem);
