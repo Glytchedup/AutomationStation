@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../DeleteBtn";
-// import Jumbotron from "../../Jumbotron";
 import { Link } from "react-router-dom";
 import API from "../../../../../utils/API";
 import { Col, Row, Container } from "../../Grid";
 import { List, ListItem } from "../../List";
 import { Input, TextArea, FormBtn } from "../../Form";
-// import cmdrun from "../../../../../foo";
-//import foo from "../../../../Scripts/app/foo";
 
 class Hotels extends Component {
   state = {
@@ -36,11 +33,6 @@ class Hotels extends Component {
       .catch(err => console.log(err));
   };
 
-  // runHotelIO = event => {
-  //   API.runIO()
-  //   .catch(err => console.log(err));
-  // };
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -66,11 +58,6 @@ class Hotels extends Component {
         .then(res => this.loadHotels())
         .catch(err => console.log(err));
     }
-
-    // trivagoSubmit = event => {
-    //     .then(res => this.trivago())
-    //     .catch(err => console.log(err));
-    // };
   
   };
   runIO = event => {
@@ -115,9 +102,7 @@ class Hotels extends Component {
           <Col size="md-4">
             <div className="form-group"> </div>
             <div className="card text-white bg-dark">
-            {/* <Jumbotron> */}
               <h1>Add Hotel</h1>
-            {/* </Jumbotron> */}
             <form>
               <div className="form-group">
               
@@ -165,14 +150,8 @@ class Hotels extends Component {
             <div className="form-group"> </div>
           <div className="card text-white bg-dark">
             <Col size = "md-12">
-            {/* <Jumbotron> */}
               <h1>Hotels</h1>
 
- {/* Card Example */}
-
-
-            
-            {/* </Jumbotron> */}
             {this.state.hotels.length ? (
               <List class="list-group-item list-group-item-dark list-group-flush">
                 {this.state.hotels.map(hotel => (
@@ -212,7 +191,6 @@ class Hotels extends Component {
                 id="automation2"
                 name="script"
                 value="www.bing.com"
-
 
                 // notchecked = "true"
                 />
