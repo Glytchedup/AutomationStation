@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../DeleteBtn";
-import Jumbotron from "../../Jumbotron";
+// import Jumbotron from "../../Jumbotron";
 import { Link } from "react-router-dom";
 import API from "../../../../../utils/API";
 import { Col, Row, Container } from "../../Grid";
@@ -112,7 +112,7 @@ class Hotels extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-3">
+          <Col size="md-4">
             <div className="form-group"> </div>
             <div className="card text-white bg-dark">
             {/* <Jumbotron> */}
@@ -161,7 +161,7 @@ class Hotels extends Component {
             </form>
                   </div>
           </Col>
-          <Col size="md-2">
+          <Col size="md-4">
             <div className="form-group"> </div>
           <div className="card text-white bg-dark">
             <Col size = "md-12">
@@ -190,7 +190,7 @@ class Hotels extends Component {
                 </Col>
             </div>
           </Col>
-          <Col size="md-3">
+          <Col size="md-4">
                         <div className="form-group"> </div>
           <div className="card text-white bg-dark">
               <h1>Run Tests</h1>

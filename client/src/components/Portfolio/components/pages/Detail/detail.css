@@ -1,68 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css?family=Oswald:400,700'); */
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 
-.card {
-  padding-left: 5px;
-  padding-right:5px;
-  padding-top:5px;
-  padding-bottom:20px;
-}
-
-.info {
-padding-bottom:10px
-
-}
-
-.btn {
-  margin-top: 20px;
-
-}
-.links {
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.link-list {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.link-list a {
-  color: rgba(22, 21, 28, 0.73);
-  text-decoration: none;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-.link-list a:first-of-type {
-  margin-left: 0;
-}
-
-.form-group {
-  padding-top: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px; 
-}
-
-.login {
-padding-bottom: 10px
-
-}
-body {
-  background-color: #4C4C4C;
-}
-
-p {
-  color:white
-}
-
-label {
-  color:white
-
-}
-
-/* 
 :root {
   --level-one: translateZ(3rem);
   --level-two: translateZ(6rem);
@@ -87,7 +24,7 @@ body {
 }
 
 .card2 {
-  width: 400px;
+  width: 600px;
 }
 
 .card__content {
@@ -119,7 +56,9 @@ body {
 
 .card__front {
   background-color: var(--clr);
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/fair.jpg);
+  /* background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/fair.jpg); */
+  background-image: url(https://cache.marriott.com/marriottassets/marriott/SBSFI/sbsfi-exterior-0024-hor-feat.jpg?interpolation=progressive-bilinear&downsize=1180px:*);
+  /* background-image: 'url({this.state.hotel.photo})'; */
   background-size: cover;
   background-blend-mode: overlay;
   color: #333;
@@ -151,6 +90,11 @@ body {
   font-size: .75rem;
   font-weight: var(--fw-bold);
   opacity: .7;
+  text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
 }
 
 .card__body {
@@ -160,18 +104,8 @@ body {
   line-height: 1.6;
 }
 
-
-
 .card__back {
   transform: rotateY(.5turn);
   color: var(--clr);
   background: #333;
 }
-
-
-
-/* .jumbotron {
-  border-style: solid;
-  border: 1px;
-  border-color: #fff; 
-} */
